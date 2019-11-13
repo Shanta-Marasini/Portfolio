@@ -55,7 +55,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/portrait.jpg");
+      background: url("../img/myphoto1small.jpg");
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
@@ -144,7 +144,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh-60px); }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -167,7 +167,9 @@ main {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #eece1a 3px solid; }
+  border: #eece1a 3px solid;
+  height: 250px;
+  width: 250px; }
 
 .bio {
   grid-area: bio;
@@ -198,6 +200,12 @@ main {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
+
+.contact {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden; }
 
 .boxes {
   display: flex;
@@ -266,24 +274,56 @@ main {
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
-    height: 75vh;
+    height: 60vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
   .menu-branding {
-    height: 25vh;
+    padding: 2px 10px;
+    height: 40vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../img/portrait_small.jpg");
-      width: 150px;
-      height: 150px; }
+      background: url("../img/myphoto1small.jpg");
+      width: 250px;
+      height: 250px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    padding: 0; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .boxes div {
+    font-size: 1rem;
+    border: 3px #fff solid;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #eece1a;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 3.5rem; }
+    main .sm-heading {
+      font-size: 1.1rem; }
   .projects {
     grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 360px) {
+  .menu-branding {
+    padding: 2px 10px;
+    height: 40vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/myphoto1small.jpg");
+      width: 200px;
+      height: 200px; } }
