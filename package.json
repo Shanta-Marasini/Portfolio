@@ -4,11 +4,16 @@
   "description": "responsive portfolio website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive --source-map-root dist/css/main.css --source-map-embed true"
   },
   "author": "santa",
   "license": "MIT",
   "dependencies": {
     "node-sass": "^4.13.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "protfolio",
+    "shanta"
+  ]
 }
